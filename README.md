@@ -1,6 +1,6 @@
 # Sistema de Gerenciamento de Biblioteca 📚
 
-Este projeto é um sistema de gerenciamento de biblioteca desenvolvido com **HTML**, **CSS** e **Bootstrap**. O objetivo é automatizar processos como empréstimo, devolução, reserva e consulta de livros, além de gerenciar o catálogo da biblioteca e as informações dos usuários.
+Este projeto é uma atividade proposta durante as aulas do curso de Informática para Internet do SENAI Pará de Minas CFP Dr. Celso Charurí e foi desenvolvido com o propósito de iniciar e desenvolver o conhecimento sobre **casos de teste**. A atividade propõe a criação de um sistema de gerenciamento de biblioteca desenvolvido com **HTML**, **CSS** e **Bootstrap**. O objetivo é automatizar processos como empréstimo, devolução, reserva e consulta de livros, além de gerenciar o catálogo da biblioteca e as informações dos usuários.
 
 ---
 
@@ -93,7 +93,7 @@ O sistema possui uma interface web com as seguintes telas:
 2. Navegue até a pasta do projeto:
 
 ```
-cd sistema-biblioteca
+   cd sistema-biblioteca
 ```
 
 3. Abra o arquivo index.html no seu navegador.
@@ -106,13 +106,25 @@ Contribuições são bem-vindas! Siga os passos abaixo:
 
 1. Faça um fork do projeto.
 
-2. Crie uma branch para sua feature (git checkout -b feature/nova-feature).
+2. Crie uma branch para sua feature:
 
-3. Commit suas mudanças (git commit -m 'Adiciona nova feature').
+```
+   git checkout -b feature/nova-feature
+```
 
-4. Push para a branch (git push origin feature/nova-feature).
+3. Commit suas mudanças:
 
-5. Abra um Pull Request.
+```
+   git commit -m 'Adiciona nova feature'
+```
+
+4. Push para a branch:
+
+```
+   git push origin feature/nova-feature
+```
+
+6. Abra um Pull Request.
 
 ---
 
