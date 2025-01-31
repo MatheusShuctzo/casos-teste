@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Definindo o conjunto de caracteres para o HTML (UTF-8) e a meta tag de visualização para dispositivos móveis -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sítio Bela Vista</title> <!-- Título que aparece na aba do navegador -->
+
+    <!-- Link para os ícones de Bootstrap, usados para ícones no site -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Link para os ícones do Materialize (para ícones em diferentes partes do site) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Ícone do site, aparece na aba do navegador (favicon) -->
+    <link rel="icon" href="/images/logo_aba.png" type="image/x-icon">
+
+    <!-- Carregamento de fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Pacifico&family=Poiret+One&family=Quicksand:wght@300..700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o Bootstrap CSS para facilitar a estilização responsiva e o layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Link para o estilo CSS personalizado para o site -->
+    <link rel="stylesheet" href="css/meu-estilo-reserva.css">
+</head>
+<body>
+    <!-- Cabeçalho (Header) da página, incluindo a barra de navegação -->
+    <header>
+        <nav class="navbar navbar-expand-lg mx-4">
+            <!-- Logo do Sítio no menu -->
+            <img class="navbar-brand img-fluid" src="/images/logo.png" alt="Sítio Bela Vista Logo" style="max-width: 70px; height: auto;">
+            
+            <!-- Título do site centralizado -->
+            <span class="mx-auto"><h2><b>SÍTIO BELA VISTA</b></h2></span>
+            
+            <!-- Botão para abrir o menu de navegação em dispositivos móveis -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacao" aria-expanded="false" aria-label="Toggle navigation" aria-controls="menu-navegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu de navegação que se adapta conforme o tamanho da tela -->
+            <div class="collapse navbar-collapse text-center" id="menu-navegacao">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                    <!-- Links de navegação para outras páginas do site -->
+                    <li class="nav-item">
+                        <a href="principal.html" class="nav-link">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reserva.html" class="nav-link active">Reserve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="perfil.html" class="nav-link">Perfil</a>
+                    </li>
+        
+                    <!-- Link para a página de login, com ícone de usuário -->
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link active" id="botao-login"><span>Entrar <i class="bi bi-person"></i></span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <!-- Seção de título do formulário de login, com uma imagem de fundo -->
+                <div class="titulo-login position-relative">
+                    <span class="titulo-texto-login">Reserve</span>
+                    <img src="/images/por-do-sol.jpg" class="img-fluid img-sol" alt="Sítio Bela Vista Por do Sol" width="100%">
+                </div>
+            </article>
+        </section>  
+
+        <section>
+            <!-- Artigo que contém o formulário de reserva -->
+            <article>
+                <!-- Container com margens (my-5) e preenchimento (py-5 px-3) para criar um espaçamento confortável -->
+                <div class="container mt-5 pt-3 px-3 mb-2">
+                    <!-- Linha de títulos para a seção -->
+                    <div class="row g-4">
+                        <div class="col-12 text-center">
+                            <div class="card bg-light">
+                                <div class="card-body cd-title">
+                                    <!-- Título da seção -->
+                                    <h4 class="card-title pt-2">Faça sua Reserva!</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Linha com o formulário de reserva -->
+                    <div class="row g-4">
+                        <div class="col-md-12">
+                            <!-- Formulário de reserva com preenchimento interno e bordas arredondadas -->
+                            <form class="my-4 bg-light px-3 py-1 rounded">
+                                <!-- Campo para data de entrada -->
+                                <div class="input-group my-3">
+                                    <!-- Texto desabilitado que descreve o campo da data de entrada -->
+                                    <input type="text" value="Data de Entrada" class="input-group-text text-start" disabled>
+                                    <!-- Campo para selecionar a data de entrada -->
+                                    <input type="date" name="data-entrada" class="form-control" required>
+                                    <!-- Texto desabilitado que descreve o campo da data de saída -->
+                                    <input type="text" value="Data de Saída" class="input-group-text text-start" disabled>
+                                    <!-- Campo para selecionar a data de saída -->
+                                    <input type="date" name="data-entrada" class="form-control" required>
+                                </div>
+        
+                                <!-- Campo para número de pessoas (adultos e crianças) -->
+                                <div class="input-group my-3">
+                                    <!-- Texto desabilitado que descreve o campo de número de adultos -->
+                                    <input type="text" value="Nº de pessoas (adultos)" class="input-group-text text-start" disabled>
+                                    <!-- Campo para inserir o número de adultos -->
+                                    <input type="number" name="n-adulto" id="n-adulto" class="form-control" min="0" required>
+                                    <!-- Texto desabilitado que descreve o campo de número de crianças -->
+                                    <input type="text" value="Nº de pessoas (crianças)" class="input-group-text text-start" disabled>
+                                    <!-- Campo para inserir o número de crianças -->
+                                    <input type="number" name="n-crianca" id="n-crianca" class="form-control" min="0" required>
+                                </div>
+        
+                                <!-- Seção para evento (radio buttons para sim ou não) -->
+                                <label for="evento" class="form-label col-12">Evento:</label>
+                                <div class="input-group">                                    
+                                    <!-- Botão de rádio para indicar que há um evento -->
+                                    <div class="input-group-text">
+                                        <input type="radio" class="form-check-input mt-0" data-bs-toggle="collapse" data-bs-target="#evento-descricao" name="evento" id="evento-sim" required>
+                                    </div> 
+                                    <!-- Campo de texto para "Sim" (desabilitado) -->
+                                    <input type="text" class="form-control bg-light-subtle" value="Sim" disabled>
+                                    <!-- Botão de rádio para indicar que não há evento -->
+                                    <div class="input-group-text">
+                                        <input type="radio" class="form-check-input mt-0" name="evento" id="evento-nao" required>
+                                    </div>
+                                    <!-- Campo de texto para "Não" (desabilitado) -->
+                                    <input type="text" class="form-control bg-light-subtle" value="Não" disabled>                                    
+                                </div>
+        
+                                <!-- Área de texto para descrever o evento, visível somente se "Sim" for selecionado -->
+                                <div class="collapse my-3" id="evento-descricao">
+                                    <select name="motivo" id="motivo-select" class="form-select" required onchange="document.getElementById(this.value).click()">
+                                        <option value="" selected disabled class="text-body-secondary">Tipo de evento:</option>
+                                        <option value="aniversario">Aniversário</option>
+                                        <option value="casamento">Casamento</option>
+                                        <option value="formatura">Formatura</option>
+                                        <option value="confraternizacao">Confraternização de empresa</option>
+                                        <option value="outro" data-bs-toggle="collapse" data-bs-target="#desc-evento" >Outro</option>
+                                    </select>
+                                    
+                                    <div id="desc-evento" class="collapse py-3">
+                                        <input type="text" class="form-control mb-2" name="nome-evento" id="nome-evento" placeholder="Nome do Evento:">
+                                        <textarea class="form-control" placeholder="Descreva o evento:"></textarea>
+                                    </div>
+
+                                </div>
+
+                                <!-- Botões para enviar ou reiniciar o formulário -->
+                                <div class="input-group my-3 d-flex">
+                                    <!-- Botão para enviar o formulário -->
+                                    <input type="submit" class="btn btn-outline-success flex-fill" value="Reservar">
+                                    <!-- Botão para limpar os campos do formulário -->
+                                    <input type="reset" class="btn btn-outline-danger flex-fill" value="Reiniciar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>               
+            </article>
+        </section>  
+        
+        <!-- Linha divisória -->
+        <div class="d-flex justify-content-center">
+            <hr width="100%">
+        </div>
+
+        <section>
+            <!-- Artigo com fundo verde (bg-success) que contém informações importantes para os visitantes -->
+            <article>
+                <!-- Container com margens superior e inferior (my-5) e preenchimento (py-5) para dar espaçamento e uma boa apresentação -->
+                <div class="container mt-1 py-4 mb-5">
+                    <!-- Row que organiza as colunas com espaçamento entre elas (g-4) -->
+                    <div class="row g-4">
+                        <!-- Primeira coluna: Título da seção, centralizado -->
+                        <div class="col-12 text-center">
+                            <div class="card bg-light">
+                                <div class="card-body cd-title">
+                                    <!-- Título da seção com um pequeno padding superior -->
+                                    <h4 class="card-title pt-2">Informações Importantes</h4>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Card 1: Sinal de Reserva -->
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <!-- Título do card com um ícone de moeda -->
+                                    <h4 class="card-title"><i class="bi bi-coin h5"></i> Sinal de Reserva: 50% do valor</h4>
+                                    <!-- Descrição do pagamento do sinal para confirmação da reserva e política de não reembolso em caso de desistência -->
+                                    <p class="card-text">
+                                        A reserva será confirmada apenas mediante o pagamento de 50% do valor total. 
+                                        Em caso de desistência, o valor não será reembolsado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Card 2: Contrato e Chaves -->
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <!-- Título do card com ícone de documento -->
+                                    <h4 class="card-title"><i class="bi bi-file-earmark-text"></i> Contrato e Chaves</h4>
+                                    <!-- Descrição sobre a necessidade de assinar o contrato antes ou no check-in e a entrega das chaves condicionada ao pagamento -->
+                                    <p class="card-text">
+                                        O contrato deve ser assinado antecipadamente ou no momento da entrada. 
+                                        A entrega das chaves está condicionada ao pagamento do saldo total no check-in.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Card 3: Sem Taxa de Limpeza -->
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <!-- Título do card com ícone de percentual -->
+                                    <h4 class="card-title"><i class="bi bi-trash"></i> Sem Taxa de Limpeza</h4>
+                                    <!-- Descrição informando que o ambiente deve ser entregue limpo e organizado, sem taxa adicional de limpeza -->
+                                    <p class="card-text">
+                                        Entregue o ambiente limpo e organizado, da mesma forma como foi recebido. 
+                                        Cuide do espaço como se fosse seu lar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Card 4: Proibido Substâncias Ilícitas -->
+                        <div class="col-md-12 col-lg-6">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <!-- Título do card com ícone de proibição -->
+                                    <h4 class="card-title"><i class="bi bi-ban"></i> Proibido Substâncias Ilícitas</h4>
+                                    <!-- Descrição que proíbe o uso de substâncias ilícitas na propriedade, enfatizando a natureza familiar do local -->
+                                    <p class="card-text">
+                                        O uso de substâncias ilícitas é estritamente proibido no Sítio. 
+                                        Lembre-se: esta é uma propriedade familiar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+                        
+    </main>
+    <!-- Rodapé -->
+    <footer class="bg-success py-4">
+        <div class="container">
+            <div class="d-flex">
+                <!-- Copyright e mensagem de direitos autorais -->
+                <p class="text-white">&copy; 2024 Sítio Bela Vista. Todos os direitos reservados.</p>
+                <a href="cadastro.html" class="btn btn-light ms-auto">Cadastre-se</a></a>
+            </div>
+            <!-- Links para páginas de privacidade, termos e redes sociais -->
+            <p>
+                <a href="#" class="text-white">Privacidade</a> <span  class="text-white">|</span>
+                <a href="#" class="text-white">Termos de Uso</a> <span  class="text-white">|</span>
+                <a href="https://www.instagram.com/sitio_bela_vistta/" class="text-white">Instagram</a>
+            </p>
+            <!-- Ícone para voltar ao topo -->
+            <a href="#" class="text-white"><i class="bi bi-arrow-up-circle-fill h3"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scripts para funcionalidades como ícones e interação do Bootstrap -->
+    <script src="https://kit.fontawesome.com/fd16eb471e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

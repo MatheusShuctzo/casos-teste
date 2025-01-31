@@ -1,0 +1,102 @@
+/* Configurações gerais para todos os elementos: estilo da caixa, cor do texto e fontes */
+* {
+    box-sizing: border-box;  /* Inclui padding e bordas no cálculo da largura e altura. Isso facilita o controle do layout sem alterar o tamanho visível dos elementos. */
+    color: #253439;  /* Cor padrão do texto - um tom escuro de azul-esverdeado. */
+    font-family: "Quicksand", sans-serif;  /* Fonte padrão para o texto do site, sem serifa e com aparência moderna. */
+    font-optical-sizing: auto;  /* Ajuste automático do tamanho da fonte baseado na largura da caixa, otimizando a legibilidade. */
+    font-weight: 500;  /* Peso da fonte ajustado para um valor médio. */
+    font-style: normal;  /* Estilo da fonte normal, sem itálico. */
+}
+
+/* Estilização do body para garantir um layout flexível e ocupar toda a altura */
+body {
+    scrollbar-width: thin;  /* Torna a barra de rolagem mais fina no Firefox. */
+    scrollbar-color: #212121;  /* Define a cor da barra de rolagem no Firefox, usando um tom escuro. */
+    display: flex;  /* Usa um layout flexível para os elementos no body. */
+    flex-direction: column;  /* Organiza os elementos em uma coluna, empilhando-os verticalmente. */
+    min-height: 100vh;  /* Garante que o corpo ocupe 100% da altura da janela, mesmo que o conteúdo seja menor. */
+    margin: 0;  /* Remove a margem padrão do body, garantindo que o layout ocupe toda a tela. */
+}
+
+/* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
+main { flex-grow: 1; } /* O conteúdo principal cresce para preencher qualquer espaço vazio na tela. */
+
+/* Faz com que a barra de navegação ocupe toda a altura disponível */
+.navbar { height: 100%; } /* A barra de navegação ocupa 100% da altura da janela do navegador. */
+
+/* Estilo para imagens com a classe 'img-sol', adicionando uma borda ao redor das imagens */
+.img-sol { outline: solid 2px #b29e84; } /* Adiciona uma borda de 2px, com a cor #b29e84, um tom dourado suave. */
+
+/* Estilo para a área de apresentação do login */
+.titulo-login {
+    position: relative;  /* Posiciona o elemento de forma relativa para centralizar o conteúdo dentro dele. */
+    text-align: center;  /* Centraliza o texto horizontalmente. */
+}
+
+/* Estilo para os botões com a classe 'bt-text', deixando o texto em negrito */
+.bt-text { font-weight: bold; } /* Deixa o texto dentro do botão em negrito. */
+
+/* Estilo para o texto do título de login, garantindo que seja centralizado e estilizado */
+.titulo-texto-login {
+    position: absolute;  /* Posiciona o texto de forma absoluta dentro do seu contêiner. */
+    top: 50%;  /* Centraliza o texto verticalmente no meio do contêiner. */
+    left: 50%;  /* Centraliza o texto horizontalmente no meio do contêiner. */
+    transform: translate(-50%, -50%);  /* Ajusta a posição do texto para que fique exatamente no centro. */
+    font-size: 5vw;  /* Tamanho da fonte proporcional à largura da janela (5% da largura). */
+    color: white;  /* Cor do texto em branco. */
+    font-weight: bold;  /* O texto fica em negrito. */
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);  /* Adiciona uma sombra ao texto para destacar. */
+    font-family: "Pacifico", cursive;  /* Fonte cursiva e estilizada para um toque informal e artístico. */
+}
+
+/* Estilo para a classe bg-success e btn-success, aplicando um fundo verde */
+.bg-success, .btn-success { 
+    background-color: #245153 !important;  /* Fundo verde escuro, aplicado com !important para garantir que prevaleça. */
+    border-color: #245153;  /* Cor da borda verde escuro. */
+}
+
+/* Estilo para o botão com borda verde */
+.btn-outline-success {
+    color: #245153;  /* Cor do texto verde escuro. */
+    border-color: #245153;  /* Cor da borda verde escuro. */
+}
+
+/* Estilo para o botão com borda verde quando passa o mouse (hover) */
+.btn-outline-success:hover {
+    background-color: #245153;  /* Cor de fundo verde escuro no hover. */
+    border-color: #245153;  /* Cor da borda verde escuro no hover. */
+}
+
+/* Estilo para o botão de login, aplicando bordas arredondadas */
+#botao-login span {
+    padding: 10px;  /* Espaçamento interno (padding) ao redor do texto. */
+    border: solid 1px;  /* Borda sólida de 1px. */
+    border-radius: 2px;  /* Bordas levemente arredondadas. */
+}
+
+/* Estilo para o botão de login quando passa o mouse (hover) */
+#botao-login span:hover {
+    background-color: #e6e6e6; /* Muda o fundo para um cinza claro quando o botão é hoverizado. */
+    transition: background ease 0.4s; /* Efeito suave de transição na mudança de fundo, com duração de 0.4s. */
+}
+
+/* Estilo personalizado para a barra de rolagem em navegadores baseados em Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px;  /* Largura da barra de rolagem vertical. */
+    height: 6px;  /* Altura da barra de rolagem horizontal. */
+}
+
+/* Estilo do trilho da barra de rolagem (área onde a barra se move) */
+::-webkit-scrollbar-track { background-color: #212121; } /* Cor do fundo do trilho (escuro). */
+
+/* Estilo do "thumb" (parte que se move) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #b29e84;  /* Cor do "thumb" (parte móvel) em tom dourado. */
+    border-radius: 10px;  /* Bordas arredondadas no "thumb". */
+}
+
+/* Estilo do "thumb" quando passa o mouse (hover) */
+::-webkit-scrollbar-thumb:hover { background-color: #b29e84a9; } /* Cor do "thumb" com transparência no hover. */
+
+/* Estilo dos botões da barra de rolagem */
+::-webkit-scrollbar-button { background-color: #212121; } /* Cor dos botões da barra de rolagem (escuro). */

@@ -1,0 +1,126 @@
+/* Aplica configurações básicas para todos os elementos */
+* {
+    box-sizing: border-box; /* Inclui padding e border nas dimensões do elemento */
+    color: #253439; /* Cor padrão do texto */
+    font-family: "Quicksand", sans-serif; /* Fonte padrão */
+    font-optical-sizing: auto; /* Ajuste automático do tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    font-style: normal; /* Estilo normal de fonte */
+}
+
+/* Garante um layout flexível, ocupando toda a altura da tela */
+body {
+    scrollbar-width: thin;  /* Barra de rolagem mais fina no Firefox */
+    scrollbar-color: #212121;  /* Cor personalizada para o Firefox */
+    display: flex; /* Organiza os elementos com layout flexível */
+    flex-direction: column; /* Empilha os elementos na direção vertical */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Faz o conteúdo principal crescer e ocupar o espaço restante */
+main {
+    flex-grow: 1;
+}
+
+/* Garante que a barra de navegação ocupe toda a altura disponível */
+.navbar {
+    height: 100%;
+}
+
+/* Aplica uma borda de 2px ao redor da imagem de fundo */
+.img-sol {
+    outline: solid 2px #b29e84;
+}
+
+/* Estilos para a classe bg-success e btn-success, aplicando uma cor de fundo verde escuro */
+.bg-success, .btn-success {
+    background-color: #245153 !important; /* Cor de fundo verde escuro */
+    border-color: #245153; /* Cor da borda */
+}
+
+/* Estilos para botões de sucesso com contorno */
+.btn-outline-success {
+    color: #245153; /* Cor do texto */
+    border-color: #245153; /* Cor da borda */
+}
+
+/* Estilos para o botão de sucesso com contorno quando é hoverizado */
+.btn-outline-success:hover {
+    background-color: #245153; /* Cor de fundo verde escuro */
+    border-color: #245153; /* Cor da borda */
+}
+
+.btn-outline-success.active {
+    background-color: #245153; /* Cor de fundo verde escuro */
+    border-color: #245153; /* Cor da borda */
+}
+
+/* Estilos para a área de apresentação, centralizando o conteúdo */
+.titulo-login {
+    position: relative;
+    text-align: center;
+}
+
+/* Estiliza o texto da área de apresentação, aplicando sombra e fonte específica */
+.titulo-texto-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centralização perfeita */
+    font-size: 5vw; /* Tamanho da fonte relativo à largura da tela */
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Peso da fonte */
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6); /* Sombra no texto */
+    font-family: "Pacifico", cursive; /* Fonte cursiva */
+}
+
+/* Estilos para o fundo e botões com cor personalizada */
+.bg-warning {
+    background-color: #b29e84 !important;
+}
+
+/* Estiliza o texto de sucesso, alterando sua cor */
+.text-success {
+    color: #245153; /* Cor personalizada para o texto de sucesso */
+}
+
+/* Estilos para o botão de login */
+#botao-login span {
+    padding: 10px; /* Espaçamento interno do botão */
+    border: solid 1px; /* Borda sólida de 1px ao redor do botão */
+    border-radius: 2px; /* Cantos ligeiramente arredondados */
+}
+
+/* Estilo para o botão de login quando o mouse passa por cima */
+#botao-login span:hover {
+    background-color: #e6e6e6; /* Cor de fundo cinza claro */
+    transition: background ease 0.4s; /* Transição suave de fundo */
+}
+
+/* Estilização personalizada da barra de rolagem para navegadores baseados em Webkit (como Chrome e Safari) */
+::-webkit-scrollbar {
+    width: 6px;  /* Largura da barra de rolagem vertical */
+    height: 6px;  /* Altura da barra de rolagem horizontal */
+}
+
+/* Estilo do trilho da barra de rolagem (área onde a barra se move) */
+::-webkit-scrollbar-track {
+    background-color: #212121; /* Cor de fundo do trilho */
+}
+
+/* Estilo do "thumb" (parte que se move) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #b29e84; /* Cor do "thumb" */
+    border-radius: 10px; /* Arredonda os cantos do "thumb" */
+}
+
+/* Estilo do "thumb" quando o mouse passa por cima */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b29e84a9; /* Cor do "thumb" no hover */
+}
+
+/* Estilo dos botões da barra de rolagem */
+::-webkit-scrollbar-button {
+    background-color: #212121; /* Cor dos botões da barra de rolagem */
+}
