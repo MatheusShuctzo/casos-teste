@@ -1,0 +1,189 @@
+/* Cor personalizada do cabeçalho */
+.navbar-custom {
+    background-color: #6c4b36;
+}
+
+/* body */
+#main{
+    padding-top: 90px;
+}
+
+/* filtro um pouco abaixo */
+#margem {
+    margin-top: 0.3cm;
+}
+
+/* Altere a cor de fundo quando o item for passado o mouse por cima */
+.dropdown-item:hover {
+    background-color: #a8826b !important;
+    color: white;
+}
+
+/* cor da opção de leitura da página */
+.btn-custom {
+    background-color: #6c4b36;
+    border-color: #6c4b36;
+    color: white;
+}
+.btn-custom:hover {
+    background-color: #5a3f2c;
+    border-color: #5a3f2c;
+}
+.btn-selected {
+    background-color: white;
+    border-color: #6c4b36;
+    color: #6c4b36;
+}
+.btn-selected:hover {
+    background-color: #f1f1f1;
+    border-color: #6c4b36;
+}
+
+/* Estilo opcional para o modal */
+.modal-header {
+    background-color: #6c4b36;
+    color: white;
+}
+
+.modal-body {
+    background-color: #f8f9fa;
+}
+
+.modal-footer {
+    background-color: #e9ecef;
+}
+
+/*FOOTER TOP*/
+#footer{ 
+    padding: 3em 2em; 
+}
+
+#footer-top{
+    margin-bottom: 2em;
+}
+
+#footer,
+#footer-top i{
+    color: #FFF;
+}
+
+#footer-top h2 {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#social-icons{
+    text-align: right;
+}
+
+#social-icons i{
+    margin-right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#social-icons i:hover{
+    color: #7a7a7a;
+}
+
+/*FOOTER DETAILS*/
+#footer-details{
+    margin-bottom: 3em;
+}
+
+#news-container,
+#contact-container,
+#link-container{
+    padding: 0;
+    border: 0;
+    margin-bottom: 2em;
+}
+
+#footer-details h4{
+    color: #FFF;
+    margin-bottom: 1.5em;
+}
+
+#news-container input{
+    border-radius: 0;
+    border: none;
+}
+
+#links-container li{
+    margin-bottom: .5em;
+}
+
+#links-container a{
+    text-decoration: none;
+}
+
+#links-container a:hover{
+    color: #FFF;
+}
+
+/* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
+main { flex-grow: 1; } /* O conteúdo principal cresce para preencher qualquer espaço vazio na tela. */
+
+.rounded { 
+    background-color: #0000000e; 
+}
+
+.bg-warning { 
+    background-color: #6c4b36 !important; 
+}
+
+.btn-outline-warning {
+    border-color: #debaa5;
+    color: #4b3c32;
+}
+
+.btn-warning:hover, .btn-outline-warning:hover, .btn-outline-warning:active {
+    background-color: #c8a088 !important;
+    border-color: #c8a088 !important;
+    color: white !important;
+}
+
+.link-warning, .link-warning:hover, .link-warning:visited {
+    color: #4b3c32 !important;
+    text-decoration-color: #4b3c32 !important;
+}
+
+.form-check-input:checked {
+    background-color: #a8826b;
+    border-color: #a8826b;
+}
+
+.form-check-input:focus, .form-control:focus { 
+    box-shadow: 0 0 0 0.25rem rgba(168, 138, 129, 0.5); 
+}
+
+.form-check-input:focus {
+    border-color: #a8826b;
+    outline: none;
+}
+
+.form-control:focus { border-color: #a8826b; }
+
+/*FOOTER BOTTOM*/
+#footer-bottom{
+    border-top: 1px solid #7a7a7a;
+    padding-top: 2em;
+}
+
+#footer-bottom i{
+    color: #e61e10;
+    margin-left: 0.3em;
+}
+
+@media(min-width: 768px){
+    #news-container{
+        padding-right: 2em;
+    }
+    #links-container{
+        padding-left: 2em;
+    }
+    #contact-container{
+        padding: 0 2em;
+        border-left: 1px solid #7a7a7a;
+        border-right: 1px solid #7a7a7a;
+    }
+}
