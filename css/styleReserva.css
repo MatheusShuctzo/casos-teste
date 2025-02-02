@@ -1,61 +1,173 @@
-/* Cor personalizada do cabeçalho */
-.navbar-custom {
-    background-color: #6c4b36;
+/* Configurações gerais para todos os elementos: estilo da caixa, cor do texto e fontes */
+* {
+    box-sizing: border-box;  /* Inclui padding e bordas no cálculo da largura e altura. */
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/* body */
-#main{
-    padding-top: 90px;
+/* Estilização do body para garantir um layout flexível e ocupar toda a altura */
+body {
+    background-color: #FFF;  /* Bege Claro */
+    scrollbar-width: thin;  /* Torna a barra de rolagem mais fina no Firefox. */
+    scrollbar-color: #3E3A34;  /* Define a cor da barra de rolagem no Firefox. */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
-/* filtro um pouco abaixo */
-#margem {
-    margin-top: 0.3cm;
+/* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
+main { 
+    flex-grow: 1;
 }
 
-/* Altere a cor de fundo quando o item for passado o mouse por cima */
-.dropdown-item:hover {
-    background-color: #a8826b !important;
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFF;  /* Bege Claro */
+    box-shadow: 0 0 0.9rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+/* Cores dos links do menu */
+.nav-link, 
+.navbar-brand, 
+.dropdown-item, 
+h2 {
+    color: #3E3A34;
+}
+
+.nav-link:hover {
+    color: #81ad6a;
+    background-color: #FFF;
+}
+
+.input-group-text, .modal-header {
+    background-color: #A3B899 !important; 
     color: white;
 }
 
 /* cor da opção de leitura da página */
 .btn-custom {
-    background-color: #6c4b36;
-    border-color: #6c4b36;
+    background-color: #A3B899;  /* Verde Pastel */
+    border-color: #A3B899;
     color: white;
 }
+
 .btn-custom:hover {
-    background-color: #5a3f2c;
-    border-color: #5a3f2c;
+    background-color: #8FA388;  /* Verde Pastel mais escuro */
+    border-color: #8FA388;
+    color: white;
 }
+
 .btn-selected {
     background-color: white;
-    border-color: #6c4b36;
-    color: #6c4b36;
+    border-color: #A3B899;  /* Verde Pastel */
+    color: #A3B899;
 }
+
 .btn-selected:hover {
     background-color: #f1f1f1;
-    border-color: #6c4b36;
+    border-color: #A3B899;
 }
 
 /* Estilo opcional para o modal */
 .modal-header {
-    background-color: #6c4b36;
+    background-color: #A3B899;  /* Verde Pastel */
     color: white;
 }
 
 .modal-body {
-    background-color: #f8f9fa;
+    background-color: #FFF;  /* Bege Claro */
 }
 
 .modal-footer {
-    background-color: #e9ecef;
+    background-color: #E9E6D3;  /* Bege mais claro */
+}
+
+.bg-warning { 
+    background-color: #D4A59A !important;  /* Terracota Suave */
+}
+
+.btn-outline-warning {
+    border-color: #D4A59A;  /* Terracota Suave */
+    color: #3E3A34;
+}
+
+.btn-warning:hover, .btn-outline-warning:hover, .btn-outline-warning:active {
+    background-color: #C8958A !important;  /* Terracota Suave mais escura */
+    border-color: #C8958A !important;
+    color: white !important;
+}
+
+.form-check-input:checked {
+    background-color: #A3B899;  /* Verde Pastel */
+    border-color: #A3B899;
+}
+
+.form-check-input:focus, .form-control:focus { 
+    box-shadow: 0 0 0 0.25rem rgba(163, 184, 153, 0.5);  /* Verde Pastel com transparência */
+}
+
+.form-check-input:focus {
+    border-color: #A3B899;  /* Verde Pastel */
+    outline: none;
+}
+
+.form-control:focus { 
+    border-color: #A3B899;  /* Verde Pastel */
+}
+
+.footer-link:hover {
+    color: #7a7a7a !important;
+}
+
+.table-bg {
+    background-color: #3E3A34 !important;  /* Marrom Escuro */
+    color: #FFF;
+}
+
+.table-left {
+    border-top-left-radius: 5px;
+}
+
+.table-right {
+    border-top-right-radius: 5px;
+}
+
+.table-bottom-left {
+    border-bottom-left-radius: 5px;
+}
+
+.table-bottom-right {
+    border-bottom-right-radius: 5px;
+}
+
+.page-link {
+    color: #A3B899;  /* Verde Pastel */
+}
+
+.page-link:hover {
+    color: #8FA388 !important;  /* Verde Pastel mais escuro */
+}
+
+.page-link:focus {
+    color: #8FA388 !important;  /* Verde Pastel mais escuro */
+    box-shadow: 0 0 0 0.25rem rgba(163, 184, 153, 0.5);  /* Verde Pastel com transparência */
+    background-color: #E9E6D3;  /* Bege mais claro */
+}
+
+/* filtro um pouco abaixo */
+#margem {
+    margin-top: 0.25cm;
 }
 
 /*FOOTER TOP*/
 #footer{ 
     padding: 3em 2em; 
+    background-color: #3E3A34;  /* Marrom Escuro */
 }
 
 #footer-top{
@@ -114,54 +226,12 @@
 
 #links-container a{
     text-decoration: none;
-}
-
-#links-container a:hover{
     color: #FFF;
 }
 
-/* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
-main { flex-grow: 1; } /* O conteúdo principal cresce para preencher qualquer espaço vazio na tela. */
-
-.rounded { 
-    background-color: #0000000e; 
+#links-container a:hover{
+    color: #A3B899;  /* Verde Pastel */
 }
-
-.bg-warning { 
-    background-color: #6c4b36 !important; 
-}
-
-.btn-outline-warning {
-    border-color: #debaa5;
-    color: #4b3c32;
-}
-
-.btn-warning:hover, .btn-outline-warning:hover, .btn-outline-warning:active {
-    background-color: #c8a088 !important;
-    border-color: #c8a088 !important;
-    color: white !important;
-}
-
-.link-warning, .link-warning:hover, .link-warning:visited {
-    color: #4b3c32 !important;
-    text-decoration-color: #4b3c32 !important;
-}
-
-.form-check-input:checked {
-    background-color: #a8826b;
-    border-color: #a8826b;
-}
-
-.form-check-input:focus, .form-control:focus { 
-    box-shadow: 0 0 0 0.25rem rgba(168, 138, 129, 0.5); 
-}
-
-.form-check-input:focus {
-    border-color: #a8826b;
-    outline: none;
-}
-
-.form-control:focus { border-color: #a8826b; }
 
 /*FOOTER BOTTOM*/
 #footer-bottom{
@@ -186,4 +256,31 @@ main { flex-grow: 1; } /* O conteúdo principal cresce para preencher qualquer e
         border-left: 1px solid #7a7a7a;
         border-right: 1px solid #7a7a7a;
     }
+}
+
+/* Estilo personalizado para a barra de rolagem em navegadores baseados em Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px;  /* Largura da barra de rolagem vertical. */
+    height: 6px;  /* Altura da barra de rolagem horizontal. */
+}
+
+/* Estilo do trilho da barra de rolagem (área onde a barra se move) */
+::-webkit-scrollbar-track { 
+    background-color: #F4F1DE;  /* Bege Claro */
+}
+
+/* Estilo do "thumb" (parte que se move) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #A3B899;  /* Verde Pastel */
+    border-radius: 10px;
+}
+
+/* Estilo do "thumb" quando passa o mouse (hover) */
+::-webkit-scrollbar-thumb:hover { 
+    background-color: #8FA388;  /* Verde Pastel mais escuro */
+}
+
+/* Estilo dos botões da barra de rolagem */
+::-webkit-scrollbar-button { 
+    background-color: #F4F1DE;  /* Bege Claro */
 }
