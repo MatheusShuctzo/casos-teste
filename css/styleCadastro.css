@@ -165,7 +165,9 @@ header {
 }
 
 /* Estilo do trilho da barra de rolagem (área onde a barra se move) */
-::-webkit-scrollbar-track { background-color: #212121; } /* Cor do fundo do trilho (escuro). */
+::-webkit-scrollbar-track { 
+    background-color: #212121; 
+} /* Cor do fundo do trilho (escuro). */
 
 /* Estilo do "thumb" (parte que se move) da barra de rolagem */
 ::-webkit-scrollbar-thumb {
@@ -174,7 +176,11 @@ header {
 }
 
 /* Estilo do "thumb" quando passa o mouse (hover) */
-::-webkit-scrollbar-thumb:hover { background-color: #b29e84a9; } /* Cor do "thumb" com transparência no hover. */
+::-webkit-scrollbar-thumb:hover { 
+    background-color: #b29e84a9; 
+} /* Cor do "thumb" com transparência no hover. */
 
 /* Estilo dos botões da barra de rolagem */
-::-webkit-scrollbar-button { background-color: #212121; } /* Cor dos botões da barra de rolagem (escuro). */
+::-webkit-scrollbar-button { 
+    background-color: #212121; 
+} /* Cor dos botões da barra de rolagem (escuro). */
