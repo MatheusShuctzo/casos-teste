@@ -15,7 +15,9 @@ body {
 }
 
 /* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
-main { flex-grow: 1; } /* O conteúdo principal cresce para preencher qualquer espaço vazio na tela. */
+main { 
+    flex-grow: 1; /* O conteúdo principal cresce para preencher qualquer espaço vazio na tela. */
+} 
 
 header {
     position: fixed;
@@ -64,7 +66,9 @@ header {
     outline: none;
 }
 
-.form-control:focus { border-color: #a8826b; }
+.form-control:focus { 
+    border-color: #a8826b; 
+}
 
 /*FOOTER TOP*/
 #footer{ 

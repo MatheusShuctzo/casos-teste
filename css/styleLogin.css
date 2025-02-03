@@ -62,8 +62,8 @@ body{
 }
 
 .link-warning, .link-warning:hover, .link-warning:visited {
-    color: #4b3c32;
-    text-decoration-color: #4b3c32;
+    color: #4b3c32 !important;
+    text-decoration-color: #4b3c32 !important;
 }
 
 .form-check-input:checked {
