@@ -45,13 +45,9 @@ h2 {
     background-color: #FFF;
 }
 
-.bg-warning { 
-    background-color: #D4A59A !important;
-}
-
 .btn-outline-warning {
-    border-color: #debaa5;
-    color: #4b3c32;
+    border-color: #C8958A;
+    color: #3E3A34;
 }
 
 .btn-warning:hover, 
@@ -65,8 +61,8 @@ h2 {
 .link-warning, 
 .link-warning:hover, 
 .link-warning:visited {
-    color: #4b3c32 !important;
-    text-decoration-color: #4b3c32 !important;
+    color: #3E3A34 !important;
+    text-decoration-color: #3E3A34 !important;
 }
 
 .form-check-input:checked {
@@ -85,6 +81,13 @@ h2 {
     color: #7a7a7a !important;
 }
 
+.contrato {
+    text-decoration: none;
+}
+
+.contrato:hover {
+    text-decoration: underline;
+}
 
 /*FOOTER TOP*/
 #footer{ 
@@ -158,11 +161,6 @@ h2 {
 #footer-bottom{
     border-top: 1px solid #7a7a7a;
     padding-top: 2em;
-}
-
-#footer-bottom i{
-    color: #e61e10;
-    margin-left: 0.3em;
 }
 
 @media(min-width: 768px){
