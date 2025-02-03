@@ -2,13 +2,24 @@
     background: rgba(255,218,121,0.5);
     color: #0d0c22;
 }
+/* Configurações gerais para todos os elementos: estilo da caixa, cor do texto e fontes */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
-body{
-    height: 100%;
-    margin: 0;
+/* Estilização do body para garantir um layout flexível e ocupar toda a altura */
+body {
+    background-color: #FFF; 
+    scrollbar-width: thin;
+    scrollbar-color: #3E3A34;
+    color: #3E3A34;
     display: flex;
     flex-direction: column;
-    padding-top: 104px; /*por causa do navbar fixed-top */
+    min-height: 100vh;
+    margin: 0;
 }
 
 .bg-primary-color{
