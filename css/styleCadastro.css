@@ -1,17 +1,21 @@
 /* Configurações gerais para todos os elementos: estilo da caixa, cor do texto e fontes */
 * {
-    box-sizing: border-box;  /* Inclui padding e bordas no cálculo da largura e altura. Isso facilita o controle do layout sem alterar o tamanho visível dos elementos. */
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Estilização do body para garantir um layout flexível e ocupar toda a altura */
 body {
-    background-color: #FFF;
-    scrollbar-width: thin;  /* Torna a barra de rolagem mais fina no Firefox. */
-    scrollbar-color: #212121;  /* Define a cor da barra de rolagem no Firefox, usando um tom escuro. */
-    display: flex;  /* Usa um layout flexível para os elementos no body. */
-    flex-direction: column;  /* Organiza os elementos em uma coluna, empilhando-os verticalmente. */
-    min-height: 100vh;  /* Garante que o corpo ocupe 100% da altura da janela, mesmo que o conteúdo seja menor. */
-    margin: 0;  /* Remove a margem padrão do body, garantindo que o layout ocupe toda a tela. */
+    background-color: #FFF; 
+    scrollbar-width: thin;
+    scrollbar-color: #3E3A34;
+    color: #3E3A34;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 /* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
@@ -28,12 +32,21 @@ header {
     box-shadow: 0 0 0.9rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 
-.rounded { 
-    background-color: #0000000e; 
+/* Cores dos links do menu */
+.nav-link, 
+.navbar-brand, 
+.dropdown-item, 
+h2 {
+    color: #3E3A34;
+}
+
+.nav-link:hover {
+    color: #81ad6a;
+    background-color: #FFF;
 }
 
 .bg-warning { 
-    background-color: #4b3c32 !important; 
+    background-color: #D4A59A !important;
 }
 
 .btn-outline-warning {
@@ -41,38 +54,42 @@ header {
     color: #4b3c32;
 }
 
-.btn-warning:hover, .btn-outline-warning:hover, .btn-outline-warning:active {
-    background-color: #c8a088 !important;
-    border-color: #c8a088 !important;
+.btn-warning:hover, 
+.btn-outline-warning:hover, 
+.btn-outline-warning:active {
+    background-color: #C8958A !important;
+    border-color: #C8958A !important;
     color: white !important;
 }
 
-.link-warning, .link-warning:hover, .link-warning:visited {
+.link-warning, 
+.link-warning:hover, 
+.link-warning:visited {
     color: #4b3c32 !important;
     text-decoration-color: #4b3c32 !important;
 }
 
 .form-check-input:checked {
-    background-color: #a8826b;
-    border-color: #a8826b;
+    background-color: #3E3A34;
+    border-color: #3E3A34;
 }
 
-.form-check-input:focus, .form-control:focus { 
-    box-shadow: 0 0 0 0.25rem rgba(168, 138, 129, 0.5); 
+.form-check-input:focus, 
+.form-control:focus,
+.form-select:focus { 
+    border-color: #A3B899;
+    box-shadow: 0 0 0 0.25rem rgba(163, 184, 153, 0.5);
 }
 
-.form-check-input:focus {
-    border-color: #a8826b;
-    outline: none;
+.footer-link:hover {
+    color: #7a7a7a !important;
 }
 
-.form-control:focus { 
-    border-color: #a8826b; 
-}
 
 /*FOOTER TOP*/
 #footer{ 
     padding: 3em 2em; 
+    background-color: #3E3A34;
 }
 
 #footer-top{
