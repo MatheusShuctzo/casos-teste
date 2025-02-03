@@ -18,6 +18,19 @@ body {
     margin: 0;
 }
 
+/* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
+main { 
+    flex-grow: 1; /* O conteúdo principal cresce para preencher qualquer espaço vazio na tela. */
+} 
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFF;
+    box-shadow: 0 0 0.9rem 0.3rem rgba(0, 0, 0, 0.3);
+}
 
 /* Cores dos links do menu */
 .nav-link, 
@@ -78,7 +91,7 @@ h2 {
 
 .hero-section{
     background-color:#f9f9f9 ;
-    padding: 130px 40px;
+    padding: 200px 40px 130px;
     text-align: center;
     display: flex;
     box-sizing: border-box;
