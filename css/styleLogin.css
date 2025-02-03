@@ -1,17 +1,26 @@
+/* Configurações gerais para todos os elementos: estilo da caixa, cor do texto e fontes */
+* {
+    box-sizing: border-box;  /* Inclui padding e bordas no cálculo da largura e altura. */
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body{
     background-color: white;
     margin: 0;
     padding: 0;
     overflow: hidden;
     height: 100%;
+    color: #3E3A34;
 }
 
-.btn{
+.btn {
     font-size: .8rem;
     font-weight: 700;
 }
 
-.bg-holder{
+.bg-holder {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -23,7 +32,7 @@ body{
     background-repeat: no-repeat;
 }
 
-.bg-holder img{
+.bg-holder img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -31,7 +40,7 @@ body{
 }
 
 
-.divider-content-center{
+.divider-content-center {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,46 +54,55 @@ body{
 }
 
 .btn-warning {
-    background-color: #debaa5;
-    border-color: #debaa5;
-    color: #4b3c32;
+    background-color: #D4A59A;
+    border-color: #D4A59A;
+    color: #3E3A34;
 }
 
 .btn-outline-warning {
-    border-color: #debaa5;
-    color: #4b3c32;
+    border-color: #D4A59A;
+    color: #3E3A34;
 }
 
-.btn-warning:hover, .btn-outline-warning:hover, .btn-outline-warning:active {
-    background-color: #c8a088 !important;
-    border-color: #c8a088 !important;
+.btn-warning:hover, 
+.btn-outline-warning:hover, 
+.btn-outline-warning:active {
+    background-color: #C8958A !important;
+    border-color: #C8958A !important;
     color: white !important;
 }
 
-.link-warning, .link-warning:hover, .link-warning:visited {
-    color: #4b3c32 !important;
-    text-decoration-color: #4b3c32 !important;
+.link-warning, 
+.link-warning:hover, 
+.link-warning:visited {
+    color: #3E3A34 !important;
+    text-decoration-color: #3E3A34 !important;
+}
+
+.input-group-text {
+    background-color: #A3B899 !important; 
+    color: white;
 }
 
 .form-check-input:checked {
-    background-color: #a8826b;
-    border-color: #a8826b;
+    background-color: #3E3A34;
+    border-color: #3E3A34;
 }
 
 .form-check-input:focus {
-    border-color: #a8826b;
+    border-color: #3E3A34;
     outline: none;
     box-shadow: 0 0 0 0.25rem rgba(168, 138, 129, 0.5);
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(168, 138, 129, 0.5);
-    border-color: #a8826b;
+    border-color: #A3B899;
+    box-shadow: 0 0 0 0.25rem rgba(163, 184, 153, 0.5);
 }
 
-a{
+a {
     text-decoration: none;
 }
-a:hover{
+a:hover {
     text-decoration: underline;
 }
