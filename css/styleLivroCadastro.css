@@ -5,6 +5,13 @@
     font-weight: 400;
     font-style: normal;
 }
+/* Configurações gerais para todos os elementos: estilo da caixa, cor do texto e fontes */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* Estilização do body para garantir um layout flexível e ocupar toda a altura */
 body {
@@ -45,9 +52,13 @@ h2 {
     background-color: #FFF;
 }
 
+.bg-warning { 
+    background-color: #D4A59A !important;
+}
+
 .btn-outline-warning {
-    border-color: #C8958A;
-    color: #3E3A34;
+    border-color: #debaa5;
+    color: #4b3c32;
 }
 
 .btn-warning:hover, 
@@ -61,14 +72,15 @@ h2 {
 .link-warning, 
 .link-warning:hover, 
 .link-warning:visited {
-    color: #3E3A34 !important;
-    text-decoration-color: #3E3A34 !important;
+    color: #4b3c32 !important;
+    text-decoration-color: #4b3c32 !important;
 }
 
 .form-check-input:checked {
     background-color: #3E3A34;
     border-color: #3E3A34;
 }
+
 
 .form-check-input:focus, 
 .form-control:focus,
@@ -77,16 +89,196 @@ h2 {
     box-shadow: 0 0 0 0.25rem rgba(163, 184, 153, 0.5);
 }
 
+
+
 .footer-link:hover {
     color: #7a7a7a !important;
 }
 
-.contrato {
+/*MAIN*/
+
+/*HERO SECTION*/
+
+.hero-section{
+    background-color:#f9f9f9 ;
+    padding: 200px 40px 130px;
+    text-align: center;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px
+}
+.hero-title{
+    font-size: 3rem;
+    font-weight: 26px;
+    color: #050505;
+    max-width: 690px;
+}
+
+.hero-subtitle{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #050505;
+    max-width: 455px;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+
+}
+.search-container input{
+    border-radius: 50px 0 0 50px;
+    flex: 1;
+}
+
+#cadastro-livros{
+    margin: 180px 40px 80px;
+}
+
+#pesquisa{
+    width: 700px;
+}
+
+.search-container .btn-search {
+    border-radius: 0 50px 50px 0;
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+.trending-title{
+    font-size: 1rem;
+    font-weight: 100;
+    color:#7a7a7a;
+}
+
+.trending-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px
+}
+
+.trending-searches .badge{
+    font-size: 0.875rem;
+    background-color: #f3f3f6;
+    color:#050505;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.trending-searches .badge:hover{
+    background-color: #C8958A ;
+    color:#050505;
+
+}
+/*DESTAQUES*/
+
+#featured-container {
+    margin-bottom: 4em;
+}
+
+.title {
+    font-size: 1.75em;
+    margin-bottom: .4em;
+    position: relative;
+}
+
+.title:before {
+    width: 75px;
+    border-top: 4px solid #7a7a7a;
+    content: "";
+    position: absolute;
+    bottom: 2em;
+}
+.card-body a{
     text-decoration: none;
 }
 
-.contrato:hover {
-    text-decoration: underline;
+#featured-images {
+    margin-top: 2em;
+}
+
+#featured-images .col-md-4 {
+    position: relative;
+    cursor: pointer;
+}
+
+#featured-images .image-container {
+    position: relative;
+    overflow: hidden; 
+}
+
+#featured-images .image-container img {
+    width: 100%;
+    display: block;
+}
+
+#featured-images .banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+/* Exibe o conteúdo apenas no hover da imagem */
+#featured-images .image-container:hover .banner-content {
+    opacity: .7; 
+    background-color: #ece8ea;
+    color: #050505;
+}
+
+@media(min-width: 768px){
+    .title{
+        font-size: 2.4em;
+    }
+    .title:before{
+        bottom: 1.5em;
+    }
+
+    #featured-images .banner-content{
+        opacity: 0;
+    }
+}
+
+/*INFO*/
+
+#info-content{
+    margin-bottom: 4em;
+    padding: 4em 1em;
+}
+
+#info-number{
+    margin: 1.5em 0;
+}
+
+#info-banner{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5em;
+}
+
+#info-number h3{
+    font-size: 3em;
+}
+
+@media(min-width: 768px){
+    #info-content{
+        padding: 3.5em;
+    }
 }
 
 /*FOOTER TOP*/
@@ -161,6 +353,11 @@ h2 {
 #footer-bottom{
     border-top: 1px solid #7a7a7a;
     padding-top: 2em;
+}
+
+#footer-bottom i{
+    color: #e61e10;
+    margin-left: 0.3em;
 }
 
 @media(min-width: 768px){

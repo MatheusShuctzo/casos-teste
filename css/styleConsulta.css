@@ -1,7 +1,3 @@
-::selection {
-    background: rgba(255,218,121,0.5);
-    color: #0d0c22;
-}
 /* Configurações gerais para todos os elementos: estilo da caixa, cor do texto e fontes */
 * {
     box-sizing: border-box;
@@ -22,72 +18,89 @@ body {
     margin: 0;
 }
 
-.bg-primary-color{
-    background-color: #fff;
-}
+/* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
+main { 
+    flex-grow: 1; /* O conteúdo principal cresce para preencher qualquer espaço vazio na tela. */
+} 
 
-.bg-secondary-color{
-    background-color: #ece8ea;
-}
-
-.bg-dark-color{
-    background-color: #050505;
-}
-
-.primary-color{
-    color: #050505;
-}
-
-.secondary-color{
-    color: #7a7a7a;
-}
-
-
-/* NAVBAR */
-#navbar{
-    border-bottom: 1px solid #7a7a7a;
-}
-
-#navbar a:hover{
-    color: #7a7a7a;
-}
-
-.navbar-brand{
-    display: flex;
-}
-
-.navbar-brand img{
-    width: 40px;
-    margin-left: 1em;
-}
-
-.navbar-brand span{
-    font-weight: 700;
-    font-size: 1.5em;
-    margin-left: 0.5em;
-
-}
-
-#navbar-items .navbar-nav{
-    display: flex;
-    justify-content: center;
+header {
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1000;
+    background-color: #FFF;
+    box-shadow: 0 0 0.9rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 
-#navbar-items .nav-item{
-    margin: 0 1em;
+/* Cores dos links do menu */
+.nav-link, 
+.navbar-brand, 
+.dropdown-item, 
+h2 {
+    color: #3E3A34;
 }
 
-#segundoBotao{
-    margin-left: 1em;
+.nav-link:hover {
+    color: #81ad6a;
+    background-color: #FFF;
 }
+
+.bg-warning { 
+    background-color: #D4A59A !important;
+}
+
+.btn-outline-warning {
+    border-color: #debaa5;
+    color: #4b3c32;
+}
+
+.btn-outline-green{
+    border-color:#A3B899;
+}
+
+.btn-outline-green:hover{
+    background-color:#A3B899 ;
+    color: white;
+}
+
+.btn-warning:hover, 
+.btn-outline-warning:hover, 
+.btn-outline-warning:active {
+    background-color: #C8958A !important;
+    border-color: #C8958A !important;
+    color: white !important;
+}
+
+.link-warning, 
+.link-warning:hover, 
+.link-warning:visited {
+    color: #4b3c32 !important;
+    text-decoration-color: #4b3c32 !important;
+}
+
+.form-check-input:checked {
+    background-color: #3E3A34;
+    border-color: #3E3A34;
+}
+
+.form-check-input:focus, 
+.form-control:focus,
+.form-select:focus { 
+    border-color: #A3B899;
+    box-shadow: 0 0 0 0.25rem rgba(163, 184, 153, 0.5);
+}
+
+.footer-link:hover {
+    color: #7a7a7a !important;
+}
+
 /*MAIN*/
 
 /*HERO SECTION*/
 
 .hero-section{
     background-color:#f9f9f9 ;
-    padding: 130px 40px;
+    padding: 200px 40px 130px;
     text-align: center;
     display: flex;
     box-sizing: border-box;
@@ -130,6 +143,7 @@ body {
     border-radius: 0 50px 50px 0;
     padding: 0 15px;
     font-size: 20px;
+    
 }
 
 .trending-title{
@@ -156,9 +170,14 @@ body {
 }
 
 .trending-searches .badge:hover{
-    background-color: #7a7a7a;
+    background-color: #C8958A ;
     color:#050505;
 
+}
+
+
+.bi-bookmark:hover{
+    color: rgb(245, 187, 27);
 }
 /*DESTAQUES*/
 
@@ -264,8 +283,9 @@ body {
 }
 
 /*FOOTER TOP*/
-#footer{
-    padding: 3em 2em;
+#footer{ 
+    padding: 3em 2em; 
+    background-color: #3E3A34;
 }
 
 #footer-top{
@@ -354,3 +374,30 @@ body {
         border-right: 1px solid #7a7a7a;
     }
 }
+
+/* Estilo personalizado para a barra de rolagem em navegadores baseados em Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px;  /* Largura da barra de rolagem vertical. */
+    height: 6px;  /* Altura da barra de rolagem horizontal. */
+}
+
+/* Estilo do trilho da barra de rolagem (área onde a barra se move) */
+::-webkit-scrollbar-track { 
+    background-color: #212121; 
+} /* Cor do fundo do trilho (escuro). */
+
+/* Estilo do "thumb" (parte que se move) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #b29e84;  /* Cor do "thumb" (parte móvel) em tom dourado. */
+    border-radius: 10px;  /* Bordas arredondadas no "thumb". */
+}
+
+/* Estilo do "thumb" quando passa o mouse (hover) */
+::-webkit-scrollbar-thumb:hover { 
+    background-color: #b29e84a9; 
+} /* Cor do "thumb" com transparência no hover. */
+
+/* Estilo dos botões da barra de rolagem */
+::-webkit-scrollbar-button { 
+    background-color: #212121; 
+} /* Cor dos botões da barra de rolagem (escuro). */
