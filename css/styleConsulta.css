@@ -54,6 +54,19 @@ h2 {
     color: #4b3c32;
 }
 
+#corPrimaria{
+    color:#4b3c32;
+}
+
+#corSecundaria{
+    color:#A3B899;
+}
+
+.text-center:focus{
+    text-decoration: none;
+    color:#A3B899;
+    outline: none;
+}
 .btn-outline-green{
     border-color:#A3B899;
 }
@@ -181,6 +194,9 @@ h2 {
 }
 /*DESTAQUES*/
 
+.livro{
+    max-height: 90%;
+}
 #featured-container {
     margin-bottom: 4em;
 }
@@ -232,7 +248,7 @@ h2 {
     align-items: center;
     flex-direction: column;
     opacity: 0; 
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5ms ;
 }
 
 /* Exibe o conteúdo apenas no hover da imagem */
