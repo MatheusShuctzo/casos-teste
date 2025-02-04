@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #FFF; /* Fundo geral */
+            color: #3E3A34; /* Cor da fonte principal */
+        }
+        .btn-outline-custom {
+            border-color: #C8958A; /* Cor do outline do botão */
+            color: #3E3A34;
+        }
+        .btn-outline-custom:hover, .btn-custom {
+            background-color: #C8958A; /* Fundo do botão e hover */
+            color: #FFF; /* Cor da fonte no hover */
+        }
+        .form-control {
+            border: 1px solid #A3B899;
+            box-shadow: 0px 2px 4px rgba(163, 184, 153, 0.5);
+        }
+        .navbar a:hover {
+            color: #81ad6a !important; /* Cor do hover nos links do menu */
+        }
+        footer a:hover {
+            color: #7a7a7a !important;
+        }
+        .navbar .nav-link {
+            color: #3E3A34; /* Cor da fonte dos links */
+        }
+        .navbar .nav-link:hover {
+            color: #81ad6a !important; /* Hover nos links */
+        }
+        footer{
+            background-color: #3E3A34 ;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    
+    <header class="fixed-top bg-white shadow">
+        <nav class="navbar navbar-expand-lg py-3 container">
+            <a class="navbar-brand d-flex gap-3 align-items-center" href="#">
+                <img src="logo-aba (1).png" alt="Logo" width="50px"> 
+                <span class="h3 fw-bold">Vereda</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container d-flex flex-column align-items-center justify-content-center flex-grow-1 pt-5 mt-5">
+        <div class="text-center p-4 bg-white shadow rounded" style="max-width: 500px;">
+            <h2 class="mb-3">Empréstimo de Livro</h2>
+            <div class="alert alert-warning" role="alert">
+                <p>• Um usuário pode ter no máximo <strong>5 livros</strong> emprestados.</p>
+                <p>• O prazo de empréstimo é de <strong>14 dias</strong>.</p>
+                <p>• Um livro só pode ser reservado por um usuário por vez.</p>
+            </div>
+            <form id="loanForm">
+                <div class="mb-3">
+                    <label for="startDate" class="form-label">Data de Início</label>
+                    <input type="date" class="form-control" id="startDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="returnDate" class="form-label">Data de Devolução</label>
+                    <input type="text" class="form-control" id="returnDate" readonly>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Confirmar</button>
+            </form>
+            <div id="message" class="mt-3"></div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="container-fluid" id="footer"> <!-- Marrom Escuro -->
+        <div class="container footer-content">
+            <div class="row">
+                <!-- FOOTER TOP-->
+                <div class="col-12" id="footer-top">
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <a class="d-flex gap-3 align-items-center" href="#" style="text-decoration: none;">
+                                <img src="logo.png" alt="" width="15%"> 
+                                <span class="h1 text-black fw-bold">Vereda</span>
+                            </a>
+                        </div>
+                        <div class="col-4" id="social-icons">
+                            <i class="bi bi-facebook text-black"></i>
+                            <i class="bi bi-instagram text-black"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- FOOTER DETAILS -->
+                <div class="col-12" id="footer-details">                
+                    <div class="row">
+                        <div class="col-12 col-md-4" id="news-container">
+                            <h4 class="text-black">Em caso de dúvida ou suporte:</h4>
+                            <p class="text-danger">
+                                Nos deixe sua mensagem
+                            </p>
+                            <form>
+                                <div class="mb-3">
+                                    <textarea name="mensagem" 
+                                    class="form-control" 
+                                    id="msg"
+                                    placeholder="Deixe sua mensagem...">
+                                </textarea>
+                                </div>
+                                <button type="submit" 
+                                class="btn btn-light"> <!-- Verde Pastel -->
+                                Enviar
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-12 col-md-4" id="contact-container">
+                            <h4 class="text-black">Formas de contato</h4>
+                            <p class="text-black">Telefone: <span class="text-danger">(xx) x xxxx-xxxx</span></p>
+                            <p class="text-black">E-mail: <span class="text-danger">contato@email.com</span></p>
+                        </div>
+                        <div class="col-12 col-md-4" id="links-container">
+                            <div class="row">
+                                <h4 class="text-black">Navegue: </h4>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#!" class="text-black footer-link">Consulta</a></li>
+                                        <li><a href="#!" class="text-black footer-link">Devolução</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#!" class="text-black footer-link">Empréstimo</a></li>
+                                        <li><a href="#!" class="text-black footer-link">Reserva</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FOOTER BOTTOM-->
+                    <div class="col-12" id="footer-bottom">    
+                        <div class="row justify-content-between">
+                            <div class="col-12 col-md-3 col-lg-8">
+                                <p class="text-black"><span class="text-danger">&copy; 5Unity 2024</span> - Todos os direitos reservados.</p>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <p class="text-black">Realizamos o seu projeto <i class="bi bi-heart h5"></i></p>
+                            </div>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("loanForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let startDate = new Date(document.getElementById("startDate").value);
+            let returnDate = new Date(startDate);
+            returnDate.setDate(startDate.getDate() + 14);
+            
+            let formattedReturnDate = returnDate.toLocaleDateString('pt-BR');
+            document.getElementById("returnDate").value = formattedReturnDate;
+            
+            let remainingLoans = 5 - 1; // Exemplo, deve-se puxar a real quantidade de empréstimos ativos
+            let message = "<div class='alert alert-success'>Empréstimo concluído!";
+            if (remainingLoans > 0) {
+                message += ` Você pode realizar o empréstimo de mais ${remainingLoans} livro(s), caso queira, caro leitor.`;
+            }
+            message += "</div>";
+            
+            document.getElementById("message").innerHTML = message;
+        });
+    </script>
+</body>
+</html>
