@@ -4,7 +4,7 @@
 
 ---
 
-#### Versão em Português Brasileiro.
+#### Versão em Português do Brasil.
 
 # Sistema de Gerenciamento de Biblioteca 📚
 
