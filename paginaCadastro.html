@@ -36,7 +36,8 @@
             <nav class="navbar navbar-expand-lg py-4">
                 <div class="container">
                     <!-- menu a esquerda -->
-                    <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    >
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -65,10 +66,16 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link me-2" href="paginaLogin.html">
-                                    <i class="fas fa-user"></i> Login
+                            <!-- Dropdown para o ícone de perfil -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <!-- Marrom Escuro -->
+                                    <i class="fas fa-user"></i> Perfil
                                 </a>
+                                <ul class="dropdown-menu p-3" aria-labelledby="profileDropdown">
+                                    <li><a class="dropdown-item nav-link" href="#">Minha Conta</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item nav-link" href="paginaLogin.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>

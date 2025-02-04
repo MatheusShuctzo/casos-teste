@@ -141,7 +141,7 @@
                                 <select id="visualizacaoSelect" class="form-select" aria-label="Selecione a visualização">
                                     <option value="todos">Visualização</option>
                                     <option value="lista">Lista</option>
-                                    <option value="grade">Grade - <span style="font-style: italic; opacity: 0.6;">Ainda não disponível</span>
+                                    <option value="grade" disabled>Grade - <span style="font-style: italic; opacity: 0.6;">Ainda não disponível</span>
                                     </option>                              
                                 </select>
                             </div>
@@ -215,21 +215,20 @@
                                     <td>O Guarani</td>
                                     <td>José de Alencar</td>
                                     <td><span class="badge bg-secondary">Reservado</span></td>
-                                    <td><button class="btn btn-outline-secondary btn-sm" disabled>Reservado</button></td>
+                                    <td><button class="btn btn-outline-secondary btn-sm"data-bs-toggle="modal" data-bs-target="#reserveModalC" data-book="O Primo Basílio" >Reservado </button></td>
                                 </tr>
                                 <tr>
                                     <td>A Moreninha</td>
                                     <td>Joaquim Manuel de Macedo</td>
                                     <td><span class="badge bg-secondary">Reservado</span></td>
-                                    <td><button class="btn btn-outline-secondary btn-sm" disabled>Reservado</button></td>
-                                </tr>
+                                    <td><button class="btn btn-outline-secondary btn-sm"data-bs-toggle="modal" data-bs-target="#reserveModalC" data-book="O Primo Basílio" >Reservado </button></td>
+                                </tr> 
                                 <tr>
                                     <td>O Primo Basílio</td>
                                     <td>José de Alencar</td>
                                     <td><span class="badge bg-secondary">Reservado</span></td>
-                                    <td><button class="btn btn-outline-secondary btn-sm" disabled>Reservado</button></td>
+                                    <td><button class="btn btn-outline-secondary btn-sm"data-bs-toggle="modal" data-bs-target="#reserveModalC" data-book="O Primo Basílio" >Reservado </button></td>
                                 </tr>
-                                
                                 <tr>
                                     <td>Fahrenheit 451</td>
                                     <td>Ray Bradbury</td>
@@ -265,6 +264,7 @@
                                     <th class="table-bg"></th>
                                     <th class="table-bg table-bottom-right"></th>
                                 </tr>
+
                             </tbody>
                         </table>
 
@@ -275,7 +275,29 @@
                             <li class="page-item"><a class="page-link" href="#!" style="color: #3E3A34;">3</a></li>
                             <li class="page-item"><a class="page-link" href="#!" style="color: #3E3A34;">Próxima</a></li>
                         </ul>
-    
+                        
+                        <!-- Modal de Cancelamento -->
+                        <div class="modal fade" id="reserveModalC" tabindex="-1" aria-labelledby="reserveModalCLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="reserveModalCLabel">Cancelar Reserva</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Informações de Reserva -->
+                                        <p id="reserve-info"><i class="fas fa-exclamation-circle text-danger"></i> Você tem 3 livros reservados. Há mais 2 reservas disponíveis.</p>
+                                        <p class="text-secondary">O prazo de empréstimo de um livro é de 14 dias.</p>
+                                            
+                                        <!-- Exibindo o nome do livro a ser reservado -->
+                                        <p><strong>Livro:</strong> <span id="book-name"></span></p>
+
+                                        <button class="btn btn-outline-warning" data-bs-dismiss="modal">Confirmar Cancelamento</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Modal de Reserva -->
                         <div class="modal fade" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -292,23 +314,12 @@
                                         <!-- Exibindo o nome do livro a ser reservado -->
                                         <p><strong>Livro:</strong> <span id="book-name"></span></p>
     
-                                        <!-- Início da reserva -->
-                                        <div class="mb-3">
-                                            <label for="startDate" class="form-label">Início da Reserva</label>
-                                            <input type="date" class="form-control" id="startDate" />
-                                        </div>
-    
-                                        <!-- Data de devolução -->
-                                        <div class="mb-3">
-                                            <label for="returnDate" class="form-label">Devolução</label>
-                                            <input type="date" class="form-control" id="returnDate" />
-                                        </div>
-    
                                         <button class="btn btn-outline-warning" data-bs-dismiss="modal">Confirmar Reserva</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
             </article>
@@ -417,7 +428,7 @@
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Script para atualizar o nome do livro no modal -->
+        <!-- Script para atualizar o nome do livro no modal - reservar -->
         <script>
             var reserveModal = document.getElementById('reserveModal');
             reserveModal.addEventListener('show.bs.modal', function (event) {
@@ -428,6 +439,20 @@
                 var bookNameElement = document.getElementById('book-name');
                 bookNameElement.textContent = bookName;
             });
+        </script>
+
+        <!-- Script para atualizar o nome do livro no modal - reservar -->
+        <script>
+            var reserveModalC = document.getElementById('reserveModalC');
+            reserveModalC.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget; // Botão que acionou o modal
+                var bookName = button.getAttribute('data-book'); // Atributo data-book
+        
+                // Atualizando o modal com o nome do livro
+                var bookNameElement = document.getElementById('book-name');
+                bookNameElement.textContent = bookName;
+            });
+
         </script>
 
         <script>
