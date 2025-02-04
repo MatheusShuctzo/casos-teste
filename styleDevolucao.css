@@ -1,0 +1,278 @@
+/* Configurações gerais para todos os elementos: estilo da caixa, cor do texto e fontes */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilização do body para garantir um layout flexível e ocupar toda a altura */
+body {
+    background-color: #FFF; 
+    scrollbar-width: thin;
+    scrollbar-color: #3E3A34;
+    color: #3E3A34;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Faz com que o conteúdo principal (main) ocupe todo o espaço disponível */
+main { 
+    flex-grow: 1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFF;
+    box-shadow: 0 0 0.9rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+/* Cores dos links do menu */
+.nav-link, 
+.navbar-brand, 
+.dropdown-item, 
+h2 {
+    color: #3E3A34;
+}
+
+.nav-link:hover {
+    color: #81ad6a;
+    background-color: #FFF;
+}
+
+.input-group-text, 
+.modal-header {
+    background-color: #A3B899 !important; 
+    color: white;
+}
+
+/* cor da opção de leitura da página */
+.btn-custom {
+    background-color: #A3B899;
+    border-color: #A3B899;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #8FA388;
+    border-color: #8FA388;
+    color: white;
+}
+
+.btn-selected {
+    background-color: white;
+    border-color: #A3B899;
+    color: #A3B899;
+}
+
+.btn-selected:hover {
+    background-color: #f1f1f1;
+    border-color: #A3B899;
+}
+
+/* Estilo opcional para o modal */
+.modal-header {
+    background-color: #A3B899;
+    color: white;
+}
+
+.modal-body {
+    background-color: #FFF;
+}
+
+.modal-footer {
+    background-color: #E9E6D3;
+}
+
+.bg-warning { 
+    background-color: #3E3A34 !important;
+}
+
+.btn-outline-warning {
+    border-color: #D4A59A;
+    color: #3E3A34;
+}
+
+.btn-warning:hover, 
+.btn-outline-warning:hover, 
+.btn-outline-warning:active {
+    background-color: #C8958A !important;
+    border-color: #C8958A !important;
+    color: white !important;
+}
+
+.form-control:focus, 
+.form-select:focus { 
+    border-color: #A3B899;
+    box-shadow: 0 0 0 0.25rem rgba(163, 184, 153, 0.5);
+}
+
+.footer-link:hover {
+    color: #7a7a7a !important;
+}
+
+.table-bg {
+    background-color: #3E3A34 !important;
+    color: #FFF;
+}
+
+.table-left {
+    border-top-left-radius: 5px;
+}
+
+.table-right {
+    border-top-right-radius: 5px;
+}
+
+.table-bottom-left {
+    border-bottom-left-radius: 5px;
+}
+
+.table-bottom-right {
+    border-bottom-right-radius: 5px;
+}
+
+.page-link {
+    color: #A3B899;
+}
+
+.page-link:hover {
+    color: #8FA388 !important;
+}
+
+.page-link:focus {
+    color: #8FA388 !important;
+    box-shadow: 0 0 0 0.25rem rgba(163, 184, 153, 0.5);
+    background-color: #E9E6D3;
+}
+
+/* filtro um pouco abaixo */
+#margem {
+    margin-top: 0.25cm;
+}
+
+/*FOOTER TOP*/
+#footer { 
+    padding: 3em 2em; 
+    background-color: #3E3A34;
+}
+
+#footer-top {
+    margin-bottom: 2em;
+}
+
+#footer,
+#footer-top i {
+    color: #FFF;
+}
+
+#footer-top h2 {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#social-icons {
+    text-align: right;
+}
+
+#social-icons i {
+    margin-right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#social-icons i:hover {
+    color: #7a7a7a;
+}
+
+/*FOOTER DETAILS*/
+#footer-details{
+    margin-bottom: 3em;
+}
+
+#news-container,
+#contact-container,
+#link-container {
+    padding: 0;
+    border: 0;
+    margin-bottom: 2em;
+}
+
+#footer-details h4 {
+    color: #FFF;
+    margin-bottom: 1.5em;
+}
+
+#news-container input {
+    border-radius: 0;
+    border: none;
+}
+
+#links-container li {
+    margin-bottom: .5em;
+}
+
+#links-container a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#links-container a:hover {
+    color: #A3B899;
+}
+
+/*FOOTER BOTTOM*/
+#footer-bottom {
+    border-top: 1px solid #7a7a7a;
+    padding-top: 2em;
+}
+
+#footer-bottom i {
+    color: #e61e10;
+    margin-left: 0.3em;
+}
+
+@media(min-width: 768px) {
+    #news-container {
+        padding-right: 2em;
+    }
+    #links-container {
+        padding-left: 2em;
+    }
+    #contact-container {
+        padding: 0 2em;
+        border-left: 1px solid #7a7a7a;
+        border-right: 1px solid #7a7a7a;
+    }
+}
+
+/* Estilo personalizado para a barra de rolagem em navegadores baseados em Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px;  /* Largura da barra de rolagem vertical. */
+    height: 6px;  /* Altura da barra de rolagem horizontal. */
+}
+
+/* Estilo do trilho da barra de rolagem (área onde a barra se move) */
+::-webkit-scrollbar-track { 
+    background-color: #F4F1DE;
+}
+
+/* Estilo do "thumb" (parte que se move) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #A3B899;
+    border-radius: 10px;
+}
+
+/* Estilo do "thumb" quando passa o mouse (hover) */
+::-webkit-scrollbar-thumb:hover { 
+    background-color: #8FA388;
+}
+
+/* Estilo dos botões da barra de rolagem */
+::-webkit-scrollbar-button { 
+    background-color: #F4F1DE;
+}
